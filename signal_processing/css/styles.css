@@ -1,0 +1,61 @@
+body
+{
+    background-image: url("sigprobg.PNG");
+}
+
+.filler, .events
+{
+    height: 400px;
+}
+
+.events
+{
+    background-color: black;
+}
+
+.header-logo
+{
+    width: 11%;
+    height: 11%;
+    display: flex;
+}
+
+.navbar-brand
+{
+    margin: auto;
+}
+
+#header, .navbar
+{
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.container-fluid
+{
+    width: 50%;
+    margin: auto;
+    padding: 0;
+}
+
+.navbar-nav, .header-logo
+{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.nav-link
+{
+    font-size: 15px;
+    display: flex !important;
+    color: white !important;
+}
+
+li
+{
+    display: flex;
+    padding-left: 30px;
+}
+

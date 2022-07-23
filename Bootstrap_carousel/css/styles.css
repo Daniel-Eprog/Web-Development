@@ -1,0 +1,73 @@
+.image
+{
+    width: 100%;
+    height: 400px;
+    align-self: center;
+}
+
+#carouselSubjects
+{
+    margin: auto;
+    width: 100%;
+}
+
+.menu
+{
+    font-family: 'Share Tech Mono', monospace;
+    margin: auto;
+}
+
+.menu-item, .navbar-brand
+{
+    margin: 15px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.row
+{
+    margin: auto;
+}
+
+body
+{
+    width: 100%;
+    background-image: url('landscape.png');
+}
+
+#welcome
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#middle
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #1B354D;
+}
+
+#join
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: black;
+}
+
+.sword
+{
+    width: 400px;
+    height: 400px;
+    transform: rotate(155deg);
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.welcome-message
+{
+    color: white;
+    font-size: 65px;
+    text-align: left;
+    font-family: 'Share Tech Mono', monospace;;
+}

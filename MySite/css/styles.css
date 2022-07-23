@@ -1,0 +1,98 @@
+.top-container, .middle-top-container, .middle-bottom-container, .bottom-container
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-fluid
+{
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.header
+{
+    text-align: center;
+    height: 300px;
+
+    /*background-image: url('background.png');*/
+}
+
+.div_1
+{
+    height: 200px;
+    width: 24%;
+    background-color: #78909C;
+    margin: 5px auto;
+}
+
+.div_2
+{
+    opacity: 60%;
+    height: 200px;
+    width: 24%;
+    margin: 5px auto;
+    background-color: #F7FDFF;
+}
+.div_3
+{
+    opacity: 60%;
+    height: 200px;
+    width: 24%;
+    margin: 5px auto;
+    background-color: #CBDFE8;
+}
+.div_4
+{
+    opacity: 75%;
+    height: 200px;
+    width: 24%;
+    margin: 5px auto;
+    background-color: #E8DACA;
+}
+
+.titlebg
+{
+    font-family: 'Share Tech Mono', sans-serif;
+    margin-top: 50px;
+    height: 200px;
+    width: 95%;
+    background-color: #F7FDFF;
+    position: relative;
+    display: inline-block;
+}
+
+
+.aboutmetitle, .projectstitle, .portfoliotitle, .contacttitle
+{
+    font-family: 'Share Tech Mono', sans-serif;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 24px;
+    color: white;
+}
+
+
+body
+{
+    margin: 0;
+    background-image: url('bodybg.png');
+}
+
+.abouttxt
+{
+    position: absolute;
+    color: white;
+    width: 20%;
+    margin-top: 70px;
+    margin-left: 15px;
+}
+
+.infodiv
+{
+    background-color: #F7FDFF;
+    margin: 50px auto;
+    opacity: 60%;
+}
+
