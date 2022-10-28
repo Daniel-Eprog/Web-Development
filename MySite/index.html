@@ -6,100 +6,345 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esteban Medero</title>
     <link rel="icon" href="molecule.png">
+    <!--font awesome icon CDN-->
+    <script src="https://kit.fontawesome.com/8706f685db.js" crossorigin="anonymous"></script>
+    <!--google font API-->
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!--p5js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <!--bootstrap CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--css style sheet-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
-
-<div class="container-fluid">
-    <div class="header">
-        <div class="titlebg">
-            <div class="title">
-                <h1>Esteban Medero</h1>
-                <p>Engineer, Artist, Educator</p>
-                <p>B.Sc. Engineering-Physics</p>
-                <p>M.Sc. Computer Science</p>
-            </div>  
-        </div>
-    </div>
-    <div class="top-container move row">
-      <div class="div_1 move selection col-lg-3 col-md-6">
-        <h1 class="aboutmetitle txtAnimate">
-            + About
-        </h1>
-        <p class="abouttxt txtAnimate">
-            Interested in who I am? How I got here? My likes, hobbies, passions and drives!? Read on!
-        </p>
-      </div>
-      <div class="div_2 move col-lg-3 col-md-6">
-        
-      </div>
-      <div class="div_3 move col-lg-3 col-md-6">
-            
-      </div>
-      <div class="div_4 move col-lg-3 col-md-6">
-
-      </div>
-    </div>
-    <div class="middle-top-container move row">
-        <div class="div_4 move col-lg-3 col-md-6">
-
-        </div>
-        <div class="div_1 move selection col-lg-3 col-md-6">
-            <h1 class="projectstitle txtAnimate">
-                + Projects
-            </h1>
-            <p class="abouttxt txtAnimate">
-                All things coded! Take a look at all my past, present, and future projects!
-            </p>
-        </div>
-        <div class="div_2 move col-lg-3 col-md-6">
-  
-        </div>
-        <div class="div_3 move col-lg-3 col-md-6">
-  
-        </div>
-    </div>
-    <div class="middle-bottom-container move row">
-        <div class="div_3 move col-lg-3 col-md-6">
-
-        </div>
-        <div class="div_4 move col-lg-3 col-md-6">
-  
-        </div>
-        <div class="div_1 move selection col-lg-3 col-md-6">
-            <h1 class="portfoliotitle txtAnimate">
-                + Portfolio
-            </h1>
-            <p class="abouttxt txtAnimate">
-                A look at my artist portfolio. Animations, music, and graphics, oh my!
-            </p>
-        </div>
-        <div class="div_2 move col-lg-3 col-md-6">
-  
-        </div>
-    </div>
-    <div class="bottom-container move row">
-        <div class="div_2 move col-lg-3 col-md-6">
-
-        </div>
-        <div class="div_3 move col-lg-3 col-md-6">
-  
-        </div>
-        <div class="div_4 move col-lg-3 col-md-6">
-  
-        </div>
-        <div class="div_1 move selection col-lg-3 col-md-6">
-            <h1 class="contacttitle txtAnimate">
-                + Contact
-            </h1>
-            <p class="abouttxt txtAnimate">
-                Like what you see? Think I have the skills to help you! Inquiries exist within!
-            </p>
-        </div>
-    </div>
+<div id="particle-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
 </div>
+<body>
+    <div class="titlebg">
+            <div class="header">
+                <h1 class="txtAnimate">Hey, I'm Esteban!</h1>
+                <p class="txtAnimate">Software Engineer and Multimedia-Artist based out of Jacksonville, Florida!</p>
+            </div>
+                <div class="row-container parentmove row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2">
+                        <button type="button" class="abt-btn ttl-btn btn btn-outline-dark">
+                            <h1 class="title txtAnimate">About</h1>
+                        </button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" class="pro-btn ttl-btn btn btn-outline-dark">
+                            <h1 class="title txtAnimate">Projects</h1>
+                        </button>
+                    </div>
+                    <div class="col-lg-2">
+                           <button type="button" class="por-btn ttl-btn btn btn-outline-dark">
+                                <h1 class="title txtAnimate">Portfolio</h1>
+                            </button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button type="button" class="con-btn ttl-btn btn btn-outline-dark">
+                            <h1 class="title txtAnimate">Contact</h1>
+                        </button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+    </div>
+    <div class="aboutcontent">
+        <div class="backbutton">
+            <button type="button" class="bk-btn btn btn-outline-light">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+        </div>
+        <div id="carouselSubjects" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                    <div class="content">
+                        <h1 class="abouttitle">Who am I?</h1>
+                        Hey, I'm Esteban!<br> 
+                        Engineer, artist, and educator based out of sunny Jacksonville, Florida!<br> 
+                        Since graduating in 2018 from the University of Central Florida,<br>
+                        I have developed a passion for design, patterns, and relationships.<br>
+                        I'm a long time educator tutoring my way through
+                        college and developing an integrative modeling approach to STEM education by 
+                        combining the thought processes of mathematical and discrete-computational thinking,<br>
+                        altering the way we see the world and utilize computers. 
+                        I've spent the last few years working on various projects
+                        from music, videogames, arts and entertainment to scientific simulations, data analysis, and engineering
+                        concept design.
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                    <h1 class="abouttitle">Skills</h1>
+                    <ul class="skilllist">
+                        <li><strong>Languages</strong></li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li><strong>Algorithms</strong></li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li><strong>UI/UX Design</strong></li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <li><strong>Data Engineering</strong></li>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </ul>
+                </div>
+                </div>
+                    <div class="carousel-item">
+                        <div class="content">
+                        <h1 class="abouttitle">Interests</h1>
+                        I'm interested in the way humans integrate and interact with computers!<br>
+                        From digital media art to AI and predictive analytics, the way we utilize computers is pretty neat!<br>
+                    </div> 
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSubjects" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSubjects" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="projectcontent">
+        <div class="backbutton">
+            <button type="button" class="bk-btn btn btn-outline-light">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="portfoliocontent">
+        <div class="backbutton">
+            <button type="button" class="bk-btn btn btn-outline-light">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="contactcontent">
+        <div class="backbutton">
+            <button type="button" class="bk-btn btn btn-outline-light">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- <div class="row-container parentmove row">
+      <div class="div_1 move selection col-lg-3 col-md-6">
+        <h1 class="title txtAnimate">
+            About
+        </h1>
+        <div class="backbutton">
+        <button type="button" class="btn btn-outline-light">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+        </button>
+        </div>
+        <div class="aboutcontent">
+            
+        <!-- <div class="div_2 move col-lg-3 col-md-6">
+        
+        </div>
+        <div class="div_3 move col-lg-3 col-md-6">
+            
+        </div>
+        <div class="div_4 move col-lg-3 col-md-6">
+
+        </div>
+    </div>
+    <div class="row-container parentmove row">
+        <div class="div_4 move col-lg-3 col-md-6">
+
+        </div>
+        <div class="div_1 move selection col-lg-3 col-md-6">
+            <h1 class="title txtAnimate">
+                Projects
+            </h1>
+            <div class="backbutton">
+                <button type="button" class="btn btn-outline-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                </button>
+            </div>
+                <div class="row projectrow">
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                </div>
+                <div class="row projectrow">
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                </div>
+                <div class="row projectrow">
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+
+                    </div>
+                    <div class="projectcontent col-lg-3 col-md-6">
+                        
+                    </div>
+                </div>
+        
+        </div>
+        <div class="div_2 move col-lg-3 col-md-6">
+  
+        </div>
+        <div class="div_3 move col-lg-3 col-md-6">
+  
+        </div>
+    </div> -->
+    <!-- <div class="row-container parentmove row">
+        <div class="div_3 move col-lg-3 col-md-6">
+
+        </div>
+        <div class="div_4 move col-lg-3 col-md-6">
+  
+        </div>
+        <div class="div_1 move selection col-lg-3 col-md-6">
+                <h1 class="title txtAnimate">
+                    Portfolio
+                </h1>
+                <div class="backbutton">
+                    <button type="button" class="btn btn-outline-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg>
+                    </button>
+                    </div>
+                <div class="row projectrow">
+                    <div class="portfoliocontent col-lg-6 col-md-12">
+                        <p class="aboutcontent">Graphic and Logo Design</p> 
+                    </div>
+                    <div class="portfoliocontent col-lg-6 col-md-12">  
+                        <p class="aboutcontent">Audio</p>
+                    </div>
+                </div>
+                <div class="row projectrow">
+                    <div class="portfoliocontent col-lg-6 col-md-12">
+                        <p class="aboutcontent">Visual</p>
+                    </div>
+                    <div class="portfoliocontent col-lg-6 col-md-12">
+                        <p class="aboutcontent">2D/3D - Drawings and Animations</p>
+                    </div>
+                </div>
+        </div>
+        <div class="div_2 move col-lg-3 col-md-6">
+  
+        </div>
+    </div>
+    <div class="row-container parentmove row">
+        <div class="div_2 move col-lg-3 col-md-6">
+
+        </div>
+        <div class="div_3 move col-lg-3 col-md-6">
+  
+        </div>
+        <div class="div_4 move col-lg-3 col-md-6">
+  
+        </div>
+        <div class="div_1 move selection col-lg-3 col-md-6">
+            <h1 class="title txtAnimate">
+                Contact
+            </h1>
+            <div class="backbutton">
+                <button type="button" class="btn btn-outline-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                </button>
+                </div>
+                <div class="row contactrow">
+                    <div class="col-6">
+                        <p>
+                        djdjdj
+                        </p>
+                    </div>
+                    <div class="col-6">
+                      <form class="contactform">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" name="email">
+                      </form></div>
+                </div>
+            </div>
+       
+    </div>
+    </div> -->
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

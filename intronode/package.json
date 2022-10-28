@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "statistics": "^3.3.0"
+  },
+  "name": "intronode",
+  "version": "1.0.0",
+  "description": "first course in learning nod.js",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Esteban Medero",
+  "license": "ISC"
+}

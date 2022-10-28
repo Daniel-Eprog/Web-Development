@@ -1,60 +1,71 @@
-var sectionopen = false;
-
-
-$(".div_1").on("click", function()
+//Primary animation for a panel that is clicked
+$(".ttl-btn").on("click", function()
 {
-    if(!sectionopen)
-    {
-        $(this).removeClass("move");
-        $(this).find("h1").removeClass("txtAnimate");
-        $(this).parent().removeClass("move");
+        $(".ttl-btn").hide();
         $(".txtAnimate").hide();
-        $(".move").animate({padding: 0, border: 0, height: 0, margin: 0}, 300).animate({width: 0}, 300);
-        setTimeout(function(){ $(this).animate({margin: 0, width: 1500, height: 1000}, 300)}.bind(this), 600);
-        for(let i=0; i<3; i++)
+        $(".particle").hide();
+        if($(this).hasClass("abt-btn"))
         {
-            setTimeout(function(){$(this).find("h1").after("<div class=infodiv></div>")}.bind(this), 1000);
-            setTimeout(function(){ $(this).find(".infodiv").animate({width: 1400}, 300).animate({height: 250}), 300}.bind(this), 1000);
+            $(".aboutcontent").animate({padding: 0, width: "100vw"}, 300);
+            $(".aboutcontent").find(".backbutton").show();
+            $(".content").show();
+            $("#carouselSubjects").show();
         }
-        sectionopen = true;
-    }
+        if($(this).hasClass("pro-btn"))
+        {
+            $(".projectcontent").animate({padding: 0, marginLeft: "0", width: "100vw"}, 300);
+            $(".projectcontent").find(".backbutton").show();
+        }
+        if($(this).hasClass("por-btn"))
+        {
+            $(".portfoliocontent").animate({padding: 0, marginTop: "0", height: "100vh"}, 300);
+            $(".portfoliocontent").find(".backbutton").show();
+        }
+        if($(this).hasClass("con-btn"))
+        {
+            $(".contactcontent").animate({padding: 0, height: "100vh"}, 300);
+            $(".contactcontent").find(".backbutton").show();
+        }
 });
 
-// $(".div_1").on("click", function()
-// {
-//     if(sectionopen === true)
-//     {
-//         $(this).addClass("move");
-//         $(this).find("h1").addClass("txtAnimate");
-//         $(this).parent().addClass("move");
-//         $(".txtAnimate").show();
-//         $(".move").animate({padding: 0, border: 0, height: 200, margin: 0}, 300).animate({width: 0}, 300);
-//         setTimeout(function(){ $(this).animate({margin: 0, width: 1500, height: 1000}, 300)}.bind(this), 600);
-//         for(let i=0; i<3; i++)
-//         {
-//             setTimeout(function(){$(this).find("h1").after("<div class=infodiv></div>")}.bind(this), 1000);
-//             setTimeout(function(){ $(this).find(".infodiv").animate({width: 1400}, 300).animate({height: 250}), 300}.bind(this), 1000);
-//         }
-//         sectionopen = false;
-//     }
-// });
-
-$(".selection").on("mouseover", function()
+$(".bk-btn").on('click', function()
 {
-    if(!sectionopen)
+    $(".backbutton").hide();
+    $(".particle").show();
+    $(".ttl-btn").show();
+    $(".txtAnimate").show();
+    if($(this).parent().parent().hasClass("aboutcontent"))
     {
-        $(this).animate({backgroundColor: "#F7FDFF"});
-        $(this).find("h1").animate({color: "black"});
-        $(this).find("p").animate({color: "black"});
+        $(".aboutcontent").animate({width: 0}, 300);
     }
+    if($(this).parent().parent().hasClass("projectcontent"))
+    {
+        $(".projectcontent").animate({width: 0, marginLeft: "100vw"}, 300);
+    }
+    if($(this).parent().parent().hasClass("portfoliocontent"))
+    {
+        $(".portfoliocontent").animate({height: 0, marginTop: "100vh"}, 300);
+    } 
+    if($(this).parent().parent().hasClass("contactcontent"))
+    {
+        $(".contactcontent").animate({height: 0}, 300);
+    }         
 });
 
-$(".selection").on("mouseleave", function() 
+//Animates clickable display panels when mouse is hovering
+$(".ttl-btn").on("mouseover", function()
 {
-    $(this).animate({backgroundColor: "#78909C"});
-    $(this).find("h1").animate({color: "white"});
-    $(this).find("p").animate({color: "white"});
+        $(this).find("h1").animate({color: "#F6F5FC"});
 });
+
+//Animates clickable panels back to original settings when mouse is no longer hovering
+$(".ttl-btn").on("mouseleave", function() 
+{
+    $(this).find("h1").animate({color: "black"});
+});
+
+
+
 
 
 
