@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+    </div>
+
+    <div class="box">
+        <% newItems.forEach(function(item){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= item.name %></p>
+            </div>
+        <% }) %>
+            
+
+        <form action="/" class="item" method="post">
+            <input type="text" name="itemAdd" placeholder="Add Item" autocomplete="off">
+            <button name="list" type="submit" value=<%= listTitle %>>+</button>
+        </form>
+    </div>
+    
+</body>
+</html>
