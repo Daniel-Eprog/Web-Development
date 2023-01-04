@@ -6,6 +6,12 @@
     text-align: center;
 }
 
+.title-logo
+{
+    position: absolute;
+    margin-left: 2%;
+}
+
 .header
 {
     text-align: center;
@@ -32,6 +38,17 @@
     --bs-btn-hover-border-color: #F6F5FC;
 }
 
+.back-logo
+{
+    margin-left: 2%;
+    z-index: 2;
+}
+
+.invert
+{
+    filter: invert(1);
+}
+
 .col-lg-2
 {
     padding: 0;
@@ -47,7 +64,7 @@
 
 .aboutcontent
 {
-    background-color: #F8FF6B !important;
+    background-color: #e8f144 !important;
     width: 0;
     height: 100vh;
     position: absolute;
@@ -79,6 +96,16 @@
     position: absolute;
 }
 
+.content-row
+{
+    align-items: center;
+}
+
+.h3
+{
+    font-family: 'Share Tech Mono', sans-serif;
+}
+
 .btn-outline-light
 {
     --bs-btn-border-width: 5px;
@@ -101,6 +128,7 @@
 .carousel-control-next, .carousel-control-prev
 {
     width: 5%;
+    height: 80vh;
 }
 
 .content
@@ -128,9 +156,9 @@
     width: 10px;
   }
 
-.carousel-item
+.carousel-item, .carousel-inner, .carousel, .slide
 {
-    height: 100vh;
+    height: 90vh !important;
 }
 
 
@@ -148,11 +176,6 @@
     width: 5%;
     height: 5%; 
 }
-
-/* .bi
-{
-    margin: 5px auto;
-} */
 
 .backbutton
 {
@@ -175,6 +198,91 @@ body
 .projectrow
 {
     margin: 0 auto;
+}
+
+/*Contact Form*/
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+.form-signin {
+  display: none;
+  max-width: 330px;
+  padding: 15px;
+  text-align: center;
+  margin: auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin .top{
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin .middle{
+
+  border-radius: 0;
+  margin-bottom: -1px;
+
+}
+
+.form-signin .bottom{
+  margin-bottom: 10px;
+  height: 100px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /*Particle background effect pure css*/

@@ -24,11 +24,12 @@ $(".ttl-btn").on("click", function()
         if($(this).hasClass("con-btn"))
         {
             $(".contactcontent").animate({padding: 0, height: "100vh"}, 300);
+            $(".form-signin").show();
             $(".contactcontent").find(".backbutton").show();
         }
 });
 
-$(".bk-btn").on('click', function()
+$(".back-logo").on('click', function()
 {
     $(".backbutton").hide();
     $(".particle").show();
@@ -37,6 +38,7 @@ $(".bk-btn").on('click', function()
     if($(this).parent().parent().hasClass("aboutcontent"))
     {
         $(".aboutcontent").animate({width: 0}, 300);
+        $("#carouselSubjects").hide();
     }
     if($(this).parent().parent().hasClass("projectcontent"))
     {
@@ -49,6 +51,7 @@ $(".bk-btn").on('click', function()
     if($(this).parent().parent().hasClass("contactcontent"))
     {
         $(".contactcontent").animate({height: 0}, 300);
+        $(".form-signin").hide();
     }         
 });
 
@@ -62,6 +65,16 @@ $(".ttl-btn").on("mouseover", function()
 $(".ttl-btn").on("mouseleave", function() 
 {
     $(this).find("h1").animate({color: "black"});
+});
+
+$(".back-logo").on("mouseover", function()
+{
+        $(this).addClass("invert");
+});
+
+$(".back-logo").on("mouseleave", function() 
+{
+    $(this).removeClass("invert");
 });
 
 
