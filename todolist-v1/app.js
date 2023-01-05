@@ -5,6 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
+const _ = require("lodash");
 
 //sets application to use express module
 const app = express();
@@ -43,6 +44,13 @@ const study = new Item({
 
 const defaultItems = [takeTrash, feedDog, study];
 
+const listSchema = {
+    name: String,
+    items: [itemsSchema]
+};
+
+const List = mongoose.model("List", listSchema);
+
 //insert documents into collection
 // Item.insertMany(defaultItems, function(err){
 //     if(err){
@@ -57,7 +65,7 @@ const defaultItems = [takeTrash, feedDog, study];
 app.get("/", function(req, res){
     
     let day = date.getDate();
-
+   
     //finds all items in our database
     Item.find({}, function(err, foundItems){
         if(err){
@@ -68,10 +76,41 @@ app.get("/", function(req, res){
            //.render() is the ejs method for sending a web page
            res.render('list', {listTitle: day, newItems: foundItems});
         }
-    });
+    });  
+});
+
+//express route parameter
+app.get("/:listName", function(req, res){
+
+    const listName = _.capitalize(req.params.listName);
+
+    //looks for for list Names placed in search bar
+    List.findOne({name: listName}, function(err, foundList){
+        if(err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            if(!foundList)
+            {
+                //creates new list if list doesn't exist
+                const list = new List({
+                    name: listName,
+                    items: defaultItems
+                }); 
+
+                list.save();
+                res.redirect("/" + listName);
+            }
+            else{
+            res.render("list", {listTitle: foundList.name, newItems: foundList.items});
+            }
+        }
+    })
 
     
-    
+
 });
 
 //performs post request to home route
@@ -82,35 +121,50 @@ app.post("/", function(req, res){
         name: req.body.itemAdd
     });
 
-    //adds document to collection
-    addItem.save();
-
-    //redirects to appropriate page
-    if(req.body.list === "Work")
+    if(req.body.list === date.getDate())
     {
-        res.redirect("/work");
+         //adds document to collection
+        addItem.save();
+        //redirects to to home route
+        res.redirect("/");
     }
     else
-    { 
-        res.redirect("/");
-
+    {
+        List.findOne({name: req.body.list}, function(err, foundList){
+            foundList.items.push(addItem);
+            foundList.save();
+        });
+        res.redirect("/" + req.body.list);
     }
     
+});
 
+app.post("/delete", function(req, res){
+
+    if(req.body.listName === date.getDate())
+    {
+    Item.findByIdAndRemove(req.body.removeItem, function(err){
+        if(err)
+        {
+            console.log(err);
+        }
+    });
+    res.redirect("/");
+    }
+    else
+    {
+        List.findOneAndUpdate({name: req.body.listName}, {$pull: {items: {_id: req.body.removeItem}}}, function(err, foundList){
+            if(err)
+            {
+                console.log(err);
+            }
+            else
+            {
+                res.redirect("/" + req.body.listName);
+            }
+        });
+    }
     
-});
-
-app.get("/work", function(req, res)
-{
-    res.render('list', {listTitle: "Work List", newItems: workItems});
-});
-
-app.post("/work", function(req, res){
-    var addItem = req.body.itemAdd;
-
-    workItems.push(addItem);
-
-    res.redirect("/work");
 });
 
 app.listen(3000, function(){
