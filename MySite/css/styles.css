@@ -133,9 +133,14 @@
 
 .content
 {
+    border: solid;
+    border-width: 5px;
+    border-radius: 15px;
     display: none;
     width: 40%;
+    height: 80%;
     margin: auto;
+    align-items: center;
     text-align: left;
 }
 
@@ -161,7 +166,6 @@
     height: 90vh !important;
 }
 
-
 .abouttitle
 {
     font-size: 40px;
@@ -175,6 +179,14 @@
     margin-left: 1%;
     width: 5%;
     height: 5%; 
+}
+
+.aboutcard
+{
+    position: absolute;
+    margin: 0 auto;
+    width: 504px;
+    height: 600px;
 }
 
 .backbutton
